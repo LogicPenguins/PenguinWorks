@@ -5,5 +5,5 @@ This module includes all preliminary calculations and analysis made for Frostfir
 
 ## Equations Used
 
-**Throat Pressure Calculation:**
+**Throat Pressure Calculation:**\n
 ![Throat Pressure Equation](images/throat_pressure_eq.png)
