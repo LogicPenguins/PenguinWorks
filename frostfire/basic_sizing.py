@@ -21,6 +21,7 @@ c_r = 5                      # c_r = contraction ratio
 
 # Calcs
 p_t = ((2/(gamma_t+1))**(gamma_t/(gamma_t-1))) * p_c
+print(f'Throat Pressure: {p_t} pascal')
 t_t = t_c/((p_c/p_t)**((gamma_t-1)/gamma_t))
 v_e = np.sqrt(
     (2 * gamma_e / (gamma_e - 1)) * R_e * t_c *
@@ -34,6 +35,7 @@ SV_i = (R_c*t_c)/p_c
 SV_t = (SV_i*((gamma_t+1)/2)**(1/(gamma_t-1)))
 SV_e = (SV_i*(p_c/p_e)**(1/gamma_e))
 mdot = thrust/v_e
+print(f'mdot: {mdot.magnitude} kg/s')
 a_t = (mdot*SV_t)/v_t
 d_t = np.sqrt((a_t/np.pi))*2
 a_e = (mdot*SV_e)/v_e
@@ -45,10 +47,10 @@ d_c = np.sqrt(a_c/np.pi)*2
 
 # Results
 print(f"""
-Chamber Diameter: {d_c.to("inch")} inch
-Throat Diameter: {d_t.to("inch")} inch
-Exit Diameter: {d_e.to("inch")} inch
-Chamber Length: {l_c.to("inch")} inch
+Chamber Diameter: {d_c.to("meter")} 
+Throat Diameter: {d_t.to("meter")}
+Exit Diameter: {d_e.to("meter")}
+Chamber Length: {l_c.to("meter")}
       
       """)
 
