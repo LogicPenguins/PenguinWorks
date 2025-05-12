@@ -6,6 +6,4 @@ This module includes all preliminary calculations and analysis made for Frostfir
 ## Equations Used
 
 **Throat Pressure Calculation:**
-\[
-p_t = \left( \frac{2}{\gamma + 1} \right)^{\frac{\gamma}{\gamma - 1}} \cdot p_c
-\]
+![Throat Pressure Equation](images/throat_pressure_eq.png)
