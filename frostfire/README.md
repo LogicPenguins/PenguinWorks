@@ -5,14 +5,15 @@ This module includes all preliminary calculations and analysis made for Frostfir
 
 ## Equations Appendix
 
-**(FIG 1) Throat Pressure Calculation:**
+**Throat Pressure Calculation**
 
 ![(FIG 1) Throat Pressure Equation](images/throat_pressure_eq.png)
 
-**(FIG 2) Coolant Boiloff**
+**Coolant Boiloff**
 
 ![(FIG 2) Coolant Boiloff](images/antoine's%20equation.png)
+![(FIG 3) Coolant Boiloff](images/clausius_clapeyron.png)
 
-**(FIG 3) Thermal Expansion**
+**Thermal Expansion**
 
-![[FIG 3] Thermal Expansion](images/thermal_expansion.png)
+![[FIG 4] Thermal Expansion](images/thermal_expansion.png)
