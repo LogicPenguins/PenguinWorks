@@ -4,7 +4,18 @@ import pint
 ureg = pint.UnitRegistry()
 Q_ = ureg.Quantity
 
-# ---------- dynamic thermal stress ----------
+# -------------------- thermal expansion tolerance --------------------
+# inputs
+diameter_chamber_with_ribs = Q_(0.0315, 'meter').magnitude
+coefficient_of_thermal_expansion = Q_(24.0*(10**-6), '1/kelvin').magnitude
+throat_inner_wall_temp = Q_(630, 'kelvin').magnitude
+temperature_difference = Q_(throat_inner_wall_temp-298.15, 'kelvin').magnitude
+
+# outputs
+diameter_increase = diameter_chamber_with_ribs * coefficient_of_thermal_expansion * temperature_difference
+print(f'{diameter_increase*1000} mm expansion')
+
+# -------------------- dynamic thermal stress --------------------
 # inputs
 chamber_diameter = Q_(0.0283, 'meter').magnitude
 throat_diameter = Q_(0.01266, 'meter').magnitude
@@ -26,7 +37,7 @@ print(f'throat hoop: {throat_inner_wall_hoop_stress} Pa')
 print(f'chamber hoop stress FOS: {round(tensile_yield_6061_chamber/chamber_inner_wall_hoop_stress,2)}')
 print(f'throat hoop stress FOS: {round(tensile_yield_6061_throat/throat_inner_wall_hoop_stress,2)}')
 
-# ---------- static stress calcs ----------
+# -------------------- static stress calcs --------------------
 
 jacket_outer_diameter = Q_(0.0508, 'meter')
 jacket_thickness = Q_(0.00927, 'meter') # update

@@ -12,3 +12,7 @@ This module includes all preliminary calculations and analysis made for Frostfir
 **(FIG 2) Coolant Boiloff**
 
 ![(FIG 2) Coolant Boiloff](images/antoine's%20equation.png)
+
+**(FIG 3) Thermal Expansion**
+
+![[FIG 3] Thermal Expansion](images/thermal_expansion.png)
